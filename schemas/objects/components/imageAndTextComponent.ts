@@ -11,6 +11,7 @@ export default defineType({
       name: 'image',
       title: 'Image',
       type: 'image',
+      validation: (rule) => rule.required(),
       options: {
         hotspot: true,
       },
@@ -19,6 +20,7 @@ export default defineType({
       name: 'text',
       title: 'Text',
       type: 'text',
+      validation: (rule) => rule.required(),
     }),
   ],
   preview: {

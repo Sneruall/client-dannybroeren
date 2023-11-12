@@ -31,6 +31,7 @@ export interface Component {
   _type: string
   image?: Image
   text?: string
+  _key?: string
 }
 
 // Page payloads

@@ -1,5 +1,7 @@
 import { ProjectListItem } from 'components/pages/home/ProjectListItem'
 import { Header } from 'components/shared/Header'
+import ImageAndTextComponent from 'components/shared/ImageAndTextComponent'
+import TextComponent from 'components/shared/TextComponent'
 import { resolveHref } from 'lib/sanity.links'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -9,9 +11,21 @@ export interface HomePageProps {
   data: HomePagePayload | null
 }
 
+// Aan het begin van uw component of in een aparte file
+const COMPONENT_MAP = {
+  imageAndTextComponent: ImageAndTextComponent, // Uw React component voor dit type
+  textComponent: TextComponent, // Uw React component voor tekstcomponenten
+  // Voeg hier meer mappings toe indien nodig
+}
+
 export function HomePage({ data }: HomePageProps) {
   // Default to an empty object to allow previews on non-existent documents
-  const { overview = [], showcaseProjects = [], title = '' } = data ?? {}
+  const {
+    overview = [],
+    showcaseProjects = [],
+    title = '',
+    components = [],
+  } = data ?? {}
 
   console.log(data)
 
@@ -19,22 +33,17 @@ export function HomePage({ data }: HomePageProps) {
     <div className="space-y-20">
       {/* Header */}
       {title && <Header centered title={title} description={overview} />}
-      {/* imageAndTextComponent */}
-      <div className="w-full">
-        {/* Image Component */}
-        <div>
-          {/* <Image
-            src="/images/hero-image.png"
-            alt="hero image"
-            width={1920}
-            height={1080}
-          /> */}
-        </div>
-        {/* Text Component */}
-        <div>
-          <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-        </div>
-      </div>
+      {/* Code here to determine which components should be rendered, based on input in sanity cms */}
+
+      {components.map((component, index) => {
+        const Component = COMPONENT_MAP[component._type]
+        if (!Component) {
+          return <p key={index}>Unknown component: {component._type}</p>
+        }
+
+        return <Component key={component._key || index} {...component} />
+      })}
+
       {/* Showcase projects */}
       {showcaseProjects && showcaseProjects.length > 0 && (
         <div className="mx-auto max-w-[100rem] rounded-md border">
