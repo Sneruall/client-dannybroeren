@@ -10,6 +10,16 @@ export default defineType({
   // liveEdit: true,
   fields: [
     defineField({
+      name: 'logo',
+      title: 'Logo',
+      description: 'This image will be used as the logo for the project',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       name: 'menuItems',
       title: 'Menu Item list',
       description: 'Links displayed on the header of your site.',
