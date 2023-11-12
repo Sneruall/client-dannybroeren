@@ -27,6 +27,12 @@ export interface ShowcaseProject {
   title?: string
 }
 
+export interface Component {
+  _type: string
+  image?: Image
+  text?: string
+}
+
 // Page payloads
 
 export interface HomePagePayload {
@@ -34,6 +40,7 @@ export interface HomePagePayload {
   overview?: PortableTextBlock[]
   showcaseProjects?: ShowcaseProject[]
   title?: string
+  components?: Component[]
 }
 
 export interface PagePayload {
