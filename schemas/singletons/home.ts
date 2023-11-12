@@ -1,4 +1,5 @@
-import { HomeIcon } from '@sanity/icons'
+import { HomeIcon, ImageIcon } from '@sanity/icons'
+
 import { defineArrayMember, defineField, defineType } from 'sanity'
 
 export default defineType({
@@ -14,6 +15,22 @@ export default defineType({
       description: 'This field is the title of your personal website.',
       title: 'Title',
       type: 'string',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'components',
+      title: 'Components',
+      type: 'array',
+      of: [{ type: 'imageAndTextComponent' }],
+    }),
+    defineField({
+      name: 'logo',
+      title: 'Logo',
+      description: 'This image will be used as the logo for the project',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
       validation: (rule) => rule.required(),
     }),
     defineField({
