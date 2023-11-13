@@ -32,7 +32,7 @@ export function HomePage({ data }: HomePageProps) {
   return (
     <div className="space-y-20">
       {/* Header */}
-      {title && <Header centered title={title} description={overview} />}
+      {/* {title && <Header centered title={title} description={overview} />} */}
       {/* Code here to determine which components should be rendered, based on input in sanity cms */}
 
       {components.map((component, index) => {
