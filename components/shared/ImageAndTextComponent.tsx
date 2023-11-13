@@ -2,8 +2,14 @@ import { urlForImage } from 'lib/sanity.image'
 import Image from 'next/image'
 import React from 'react'
 
-const ImageAndTextComponent = ({ image, text }) => {
-  const imageUrl = urlForImage(image).url() // Todo, fix typescript error
+interface ImageAndTextComponentProps {
+  image?: { asset?: any }
+  text?: string
+}
+
+export function ImageAndTextComponent(props: ImageAndTextComponentProps) {
+  const { image, text } = props
+  const imageUrl = urlForImage(image!)?.url() || ''
 
   return (
     <>
