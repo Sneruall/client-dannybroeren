@@ -36,6 +36,7 @@ export interface Component {
 
 // Page payloads
 
+// todo: update payload to e.g. not include showcaseProjects anymore
 export interface HomePagePayload {
   footer?: PortableTextBlock[]
   overview?: PortableTextBlock[]

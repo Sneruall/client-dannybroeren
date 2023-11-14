@@ -34,7 +34,6 @@ export function HomePage({ data }: HomePageProps) {
       {/* Header */}
       {/* {title && <Header centered title={title} description={overview} />} */}
       {/* Code here to determine which components should be rendered, based on input in sanity cms */}
-
       {components.map((component, index) => {
         const Component = COMPONENT_MAP[component._type]
         if (!Component) {
@@ -45,7 +44,7 @@ export function HomePage({ data }: HomePageProps) {
       })}
 
       {/* Showcase projects */}
-      {showcaseProjects && showcaseProjects.length > 0 && (
+      {/* {showcaseProjects && showcaseProjects.length > 0 && (
         <div className="mx-auto max-w-[100rem] rounded-md border">
           {showcaseProjects.map((project, key) => {
             const href = resolveHref(project._type, project.slug)
@@ -59,7 +58,7 @@ export function HomePage({ data }: HomePageProps) {
             )
           })}
         </div>
-      )}
+      )} */}
     </div>
   )
 }

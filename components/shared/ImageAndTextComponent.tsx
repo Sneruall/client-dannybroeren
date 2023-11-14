@@ -29,7 +29,7 @@ export function ImageAndTextComponent(props: ImageAndTextComponentProps) {
           )}
         </div>
         <div className="flex-1 m-auto">
-          <h2 className="text-2xl">{text}</h2>
+          <h2 className="text-2xl font-playfair">{text}</h2>
         </div>
       </div>
     </>
