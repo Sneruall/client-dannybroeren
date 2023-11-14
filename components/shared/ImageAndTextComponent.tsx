@@ -13,23 +13,23 @@ export function ImageAndTextComponent(props: ImageAndTextComponentProps) {
 
   return (
     <>
-      <div className="flex justify-center w-full h-[500px] px-52">
-        <div className="relative flex-1">
+      <div className="flex w-full h-[500px] justify-center space-x-10 lg:space-x-20">
+        <div className="relative flex-1 max-w-lg">
           {imageUrl && (
             <Image
-              className=""
+              className="rounded-lg"
               alt="alt"
-              sizes="500px"
+              sizes="512px"
               fill
               style={{
-                objectFit: 'contain',
+                objectFit: 'cover',
               }}
               src={imageUrl}
             />
           )}
         </div>
-        <div className="flex-1 m-auto">
-          <h2 className="text-2xl font-playfair">{text}</h2>
+        <div className="flex-1 m-auto max-w-md">
+          <h2 className="text-2xl font-playfair text-center">{text}</h2>
         </div>
       </div>
     </>
