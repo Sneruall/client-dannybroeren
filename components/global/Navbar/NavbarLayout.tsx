@@ -36,11 +36,7 @@ export default function Navbar(props: NavbarProps) {
           return (
             <Link
               key={key}
-              className={`text-lg hover:text-black md:text-xl ${
-                menuItem?._type === 'home'
-                  ? 'font-extrabold text-black'
-                  : 'text-gray-600'
-              }`}
+              className="text-lg hover:text-black border-b-4 border-opacity-0 hover:border-opacity-100 border-b-[#FD4EAC] md:text-3xl text-gray-800 font-league"
               href={href}
             >
               {menuItem.title}
