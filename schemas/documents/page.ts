@@ -56,7 +56,7 @@ export default defineType({
       name: 'body',
       title: 'Body',
       description:
-        "This is where you can write the page's content. Including custom blocks like timelines for more a more visual display of information.",
+        "This is where you can write the page's contents. Including custom blocks like timelines for more a more visual display of information.",
       of: [
         // Paragraphs
         defineArrayMember({
@@ -77,7 +77,16 @@ export default defineType({
               },
             ],
           },
-          styles: [],
+          styles: [
+            { title: 'Normal', value: 'normal' },
+            { title: 'H1', value: 'h1' },
+            { title: 'H2', value: 'h2' },
+            { title: 'H3', value: 'h3' },
+            { title: 'H4', value: 'h4' },
+            { title: 'H5', value: 'h5' },
+            { title: 'H6', value: 'h6' },
+            { title: 'Quote', value: 'blockquote' },
+          ],
         }),
         // Custom blocks
         defineArrayMember({
