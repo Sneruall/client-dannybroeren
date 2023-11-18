@@ -11,8 +11,6 @@ export function ImageAndTextComponent(props: ImageAndTextComponentProps) {
   const { image, text } = props
   const imageUrl = urlForImage(image!)?.url() || ''
 
-  //   todo: checkbox in studio om ook voor desktop een 'full width' image te tonen? Of moet dat een ander 'hero' component zijn?
-
   return (
     <>
       {/* MOBILE VIEW */}
