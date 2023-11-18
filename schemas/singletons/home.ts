@@ -19,9 +19,10 @@ export default defineType({
     }),
     defineField({
       name: 'components',
+      description: 'Choose components to display on your page.',
       title: 'Components',
       type: 'array',
-      of: [{ type: 'imageAndTextComponent' }],
+      of: [{ type: 'imageAndTextComponent' }, { type: 'quoteComponent' }],
     }),
     defineField({
       name: 'logo',

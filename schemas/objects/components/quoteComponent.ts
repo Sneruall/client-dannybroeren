@@ -2,7 +2,7 @@ import { BlockquoteIcon } from '@sanity/icons'
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
-  name: 'quote',
+  name: 'quoteComponent',
   title: 'Quote',
   icon: BlockquoteIcon, // Use an icon that represents a quote
   type: 'object',
