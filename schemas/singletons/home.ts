@@ -25,16 +25,6 @@ export default defineType({
       of: [{ type: 'imageAndTextComponent' }, { type: 'quoteComponent' }],
     }),
     defineField({
-      name: 'logo',
-      title: 'Logo',
-      description: 'This image will be used as the logo for the project',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-      validation: (rule) => rule.required(),
-    }),
-    defineField({
       name: 'overview',
       description:
         'Used both for the <meta> description tag for SEO, and the personal website subheader.',
