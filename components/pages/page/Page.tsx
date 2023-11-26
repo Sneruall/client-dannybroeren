@@ -12,14 +12,14 @@ export function Page({ data }: PageProps) {
 
   return (
     <div>
-      <div className="mb-14">
+      <div className="mb-14 max-w-3xl mx-auto">
         {/* Header */}
         <Header title={title} description={overview} />
 
         {/* Body */}
         {body && (
           <CustomPortableText
-            paragraphClasses="font-playfair text-gray-900 text-xl"
+            paragraphClasses="font-playfair text-gray-900 text-xl pb-4"
             value={body}
           />
         )}

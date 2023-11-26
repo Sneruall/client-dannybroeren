@@ -6,12 +6,12 @@ interface HeaderProps {
   title?: string
 }
 export function Header(props: HeaderProps) {
-  const { title, description, centered = false } = props
+  const { title, description, centered = true } = props
   if (!description && !title) {
     return null
   }
   return (
-    <div className={`${centered ? 'text-center' : 'w-5/6 lg:w-3/5'} mb-4`}>
+    <div className={`${centered ? 'text-center' : 'w-5/6 lg:w-3/5'} mb-16`}>
       {/* Title */}
       {title && (
         <div className="text-5xl font-league tracking-tight md:text-7xl">
