@@ -19,5 +19,30 @@ module.exports = {
       dancing: 'var(--font-dancing-script)',
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/typography'), require('daisyui')],
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          primary: '#fd4eac',
+
+          secondary: '#0070ff',
+
+          accent: '#0000ff',
+
+          neutral: '#090211',
+
+          'base-100': '#f2ffff',
+
+          info: '#00f2ff',
+
+          success: '#7ede08',
+
+          warning: '#ff3f00',
+
+          error: '#d32d42',
+        },
+      },
+    ],
+  },
 }

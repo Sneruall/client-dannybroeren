@@ -8,6 +8,7 @@ import { token } from 'lib/sanity.fetch'
 import dynamic from 'next/dynamic'
 import { draftMode } from 'next/headers'
 import { Suspense } from 'react'
+import Navbar2 from 'components/global/Navbar/Navbar2'
 
 const PreviewProvider = dynamic(
   () => import('components/preview/PreviewProvider'),
