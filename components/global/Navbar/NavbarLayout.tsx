@@ -16,7 +16,7 @@ export default function Navbar(props: NavbarProps) {
   const imageUrl = urlForImage(data.logo!)?.url() || ''
 
   return (
-    <div className="navbar max-w-screen-xl mx-auto">
+    <div className="navbar max-w-screen-xl mx-auto lg:my-3">
       <div className="navbar-start">
         <div className="dropdown">
           <DropdownMenu menuItems={menuItems} />
