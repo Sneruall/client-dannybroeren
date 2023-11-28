@@ -16,6 +16,34 @@ export function CustomPortableText({
       normal: ({ children }) => {
         return <p className={paragraphClasses}>{children}</p>
       },
+      h1: ({ children }) => (
+        <h1 className="font-playfair text-gray-900 text-6xl pb-4">
+          {children}
+        </h1>
+      ),
+      h2: ({ children }) => (
+        <h2 className="font-playfair text-gray-900 text-5xl pb-4">
+          {children}
+        </h2>
+      ),
+      h3: ({ children }) => (
+        <h3 className="font-playfair text-gray-900 text-4xl pb-4">
+          {children}
+        </h3>
+      ),
+      h4: ({ children }) => (
+        <h4 className="font-playfair text-gray-900 text-3xl pb-4">
+          {children}
+        </h4>
+      ),
+      h5: ({ children }) => (
+        <h5 className="font-playfair text-gray-900 text-2xl pb-4">
+          {children}
+        </h5>
+      ),
+      h6: ({ children }) => (
+        <h6 className="font-playfair text-gray-900 text-xl pb-4">{children}</h6>
+      ),
     },
     marks: {
       link: ({ children, value }) => {
@@ -29,6 +57,22 @@ export function CustomPortableText({
           </a>
         )
       },
+    },
+    list: {
+      bullet: ({ children }) => (
+        <ul className="font-playfair text-gray-900 text-xl pb-4 list-outside list-disc">
+          {children}
+        </ul>
+      ),
+      number: ({ children }) => (
+        <ol className="font-playfair text-gray-900 text-xl pb-4 list-inside list-decimal">
+          {children}
+        </ol>
+      ),
+
+      checkmarks: ({ children }) => (
+        <ol className="font-playfair text-gray-900 text-xl pb-4">{children}</ol>
+      ),
     },
     types: {
       image: ({
