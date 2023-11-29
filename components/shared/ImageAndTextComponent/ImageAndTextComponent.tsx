@@ -1,10 +1,10 @@
 import { urlForImage } from 'lib/sanity.image'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
-import DesktopImage from './DesktopImage'
-import DesktopText from './DesktopText'
-import MobileText from './MobileText'
+import FadeIn from '../Animations/FadeIn'
+import FadeInAndMoveUp from '../Animations/FadeInAndMoveUp'
 import Button from './Button'
 
 interface ImageAndTextComponentProps {
@@ -33,16 +33,45 @@ export function ImageAndTextComponent(props: ImageAndTextComponentProps) {
         )}
         {/* todo: text kleur laten kiezen in sanity, zodat het leesbaar is op lichte en donkere achtergronden. Zelfde voor positie? Bedenken of het verschillende components worden of een met vars in de code */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center space-y-4">
-          <MobileText text={text} />
-          {button && <Button text={button} />}
+          <FadeInAndMoveUp>
+            <h2 className="text-2xl font-playfair text-center text-white">
+              {text}
+            </h2>
+          </FadeInAndMoveUp>
+          {button && (
+            <FadeInAndMoveUp delay={1}>
+              <Button text={button} />
+            </FadeInAndMoveUp>
+          )}
         </div>
       </div>
       {/* DESKTOP VIEW */}
       <div className="hidden sm:flex w-full h-[500px] justify-center space-x-10 lg:space-x-20">
-        <DesktopImage imageUrl={imageUrl} />
+        <div className="relative flex-1 max-w-lg">
+          <FadeIn>
+            {imageUrl && (
+              <Image
+                className="rounded-lg"
+                alt="todo alt"
+                sizes="512px"
+                fill
+                style={{
+                  objectFit: 'cover',
+                }}
+                src={imageUrl}
+              />
+            )}
+          </FadeIn>
+        </div>
         <div className="flex-1 m-auto max-w-md flex flex-col items-center justify-center space-y-4">
-          <DesktopText text={text} />
-          {button && <Button text={button} />}
+          <FadeInAndMoveUp delay={0.5} duration={1}>
+            <h2 className="text-2xl font-playfair text-center">{text}</h2>
+          </FadeInAndMoveUp>
+          {button && (
+            <FadeInAndMoveUp delay={1}>
+              <Button text={button} />
+            </FadeInAndMoveUp>
+          )}
         </div>
       </div>
       {/* Todo, call to actie toevoegen? Anders zo'n homepage waar je niet vanaf komt... */}
