@@ -1,5 +1,5 @@
-import { defineField, defineType } from 'sanity'
 import { ImageIcon } from '@sanity/icons'
+import { defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'imageAndTextComponent',
@@ -21,6 +21,11 @@ export default defineType({
       title: 'Text',
       type: 'text',
       validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'button',
+      title: 'Call to action button text',
+      type: 'text',
     }),
   ],
   preview: {

@@ -6,16 +6,16 @@ type Props = {
   text: string | undefined
 }
 
-function DesktopText({ text }: Props) {
+function MobileText({ text }: Props) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 25 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
     >
-      <h2 className="text-2xl font-playfair text-center">{text}</h2>
+      <h2 className="text-2xl font-playfair text-center text-white">{text}</h2>
     </motion.div>
   )
 }
 
-export default DesktopText
+export default MobileText
