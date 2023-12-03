@@ -1,6 +1,6 @@
 import { ProjectListItem } from 'components/pages/home/ProjectListItem'
 import { Header } from 'components/shared/Header'
-import ImageAndTextComponent from 'components/shared/ImageAndTextComponent'
+import ImageAndTextComponent from 'components/shared/ImageAndTextComponent/ImageAndTextComponent'
 import QuoteComponent from 'components/shared/QuoteComponent'
 import TextComponent from 'components/shared/TextComponent'
 import { resolveHref } from 'lib/sanity.links'

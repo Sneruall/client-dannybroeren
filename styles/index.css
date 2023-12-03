@@ -45,6 +45,10 @@ h6 {
   font-size: 1rem;
 }
 
+.btn-outline.btn-primary:hover {
+  color: white;
+}
+
 blockquote {
   font-family: var(--font-dancing-script);
   font-size: 1.5rem;
