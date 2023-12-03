@@ -1,11 +1,12 @@
-import { DocumentIcon, ImageIcon } from '@sanity/icons'
 import { defineArrayMember, defineField, defineType } from 'sanity'
+import { IoIosDocument } from 'react-icons/io'
+import { FaImage } from 'react-icons/fa'
 
 export default defineType({
   type: 'document',
   name: 'page',
   title: 'Page',
-  icon: DocumentIcon,
+  icon: IoIosDocument,
   fields: [
     defineField({
       type: 'string',
@@ -95,7 +96,7 @@ export default defineType({
         }),
         defineField({
           type: 'image',
-          icon: ImageIcon,
+          icon: FaImage,
           name: 'image',
           title: 'Image',
           options: {
