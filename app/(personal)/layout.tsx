@@ -21,7 +21,7 @@ export default async function IndexRoute({
   const isDraftMode = draftMode().isEnabled
 
   const layout = (
-    <div className="flex min-h-screen flex-col bg-white text-black">
+    <div className="flex min-h-screen flex-col bg-white text-black bg-[url('/vlinder-medium.png')] bg-no-repeat bg-right-top">
       {isDraftMode && <PreviewBanner />}
       <Suspense>
         <Navbar />

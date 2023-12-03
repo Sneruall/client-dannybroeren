@@ -44,23 +44,6 @@ export function HomePage({ data }: HomePageProps) {
 
         return <Component key={component._key || index} {...component} />
       })}
-
-      {/* Showcase projects */}
-      {/* {showcaseProjects && showcaseProjects.length > 0 && (
-        <div className="mx-auto max-w-[100rem] rounded-md border">
-          {showcaseProjects.map((project, key) => {
-            const href = resolveHref(project._type, project.slug)
-            if (!href) {
-              return null
-            }
-            return (
-              <Link key={key} href={href}>
-                <ProjectListItem project={project} odd={key % 2} />
-              </Link>
-            )
-          })}
-        </div>
-      )} */}
     </div>
   )
 }
