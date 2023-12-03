@@ -46,8 +46,10 @@ export default function Navbar(props: NavbarProps) {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn btn-primary btn-sm md:btn-md text-white">Contact</a>
-      </div>{' '}
+        <a className="btn btn-primary btn-outline btn-sm md:btn-md text-white">
+          Contact
+        </a>
+      </div>
     </div>
   )
 }
