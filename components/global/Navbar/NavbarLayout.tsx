@@ -16,7 +16,7 @@ export default function Navbar(props: NavbarProps) {
   const imageUrl = urlForImage(data.logo!)?.url() || ''
 
   return (
-    <div className="navbar max-w-screen-xl mx-auto lg:my-3">
+    <div className="navbar max-w-screen-xl mx-auto mt-1 lg:my-3">
       <div className="navbar-start">
         <div className="dropdown">
           <DropdownMenu menuItems={menuItems} />
@@ -35,7 +35,7 @@ export default function Navbar(props: NavbarProps) {
               return (
                 <li key={key}>
                   <Link
-                    className="text-lg hover:text-black border-b-4 border-opacity-0 hover:border-opacity-100 border-b-[#FD4EAC] sm:text-xl md:text-2xl xl:text-3xl text-gray-800 font-league"
+                    className="text-xl hover:text-black border-b-4 border-opacity-0 hover:border-opacity-100 border-b-[#FD4EAC] sm:text-2xl md:text-3xl xl:text-4xl text-gray-800 font-league"
                     href={href}
                   >
                     {menuItem.title}
@@ -46,7 +46,7 @@ export default function Navbar(props: NavbarProps) {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn btn-primary btn-outline btn-sm md:btn-md text-white">
+        <a className="btn btn-primary btn-outline btn-md lg:btn-lg text-white">
           Contact
         </a>
       </div>

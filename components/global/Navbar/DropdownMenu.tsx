@@ -46,7 +46,7 @@ const DropdownMenu = ({ menuItems }) => {
             return (
               <li key={key} onClick={toggleDropdown}>
                 <Link
-                  className="text-lg hover:text-black border-b-4 border-opacity-0 hover:border-opacity-100 border-b-[#FD4EAC] sm:text-xl md:text-2xl xl:text-3xl text-gray-800 font-league"
+                  className="text-2xl hover:text-black border-b-4 border-opacity-0 hover:border-opacity-100 border-b-[#FD4EAC] text-gray-800 font-league"
                   href={href}
                 >
                   {menuItem.title}
