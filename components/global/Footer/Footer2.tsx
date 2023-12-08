@@ -1,11 +1,11 @@
-import React from 'react'
-
+// todo: add social media icons
 import Image from 'next/image'
+import React from 'react'
 
 const Footer2 = () => {
   const images = [
     '/image1.png', //
-    '/image1.png',
+    '/image2.png',
     '/image1.png',
     '/image1.png',
   ]
@@ -13,14 +13,15 @@ const Footer2 = () => {
     <footer className="">
       <div className="flex justify-center items-center gap-3 mx-auto max-w-screen-xl mt-3">
         {images.map((image, index) => (
-          <div key={index} className="w-full">
+          <div key={index} className="w-full h-80 relative">
             <Image
               src={image}
               alt={`Image ${index + 1}`}
-              layout="responsive"
-              width={100} // These values are placeholders and will be overridden by the responsive layout
-              height={100}
-              objectFit="cover"
+              sizes="500px"
+              fill
+              style={{
+                objectFit: 'cover',
+              }}
             />
           </div>
         ))}
@@ -34,7 +35,7 @@ const Footer2 = () => {
         </p>
       </div>
       <p className="text-xs text-white text-center">
-        &copy; 2022 Your Company. All rights reserved.
+        &copy; 2024 Puur Counselling. All rights reserved.
       </p>
     </footer>
   )
