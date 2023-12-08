@@ -6,7 +6,7 @@ const Footer2 = () => {
   const images = [
     '/image1.png', //
     '/image2.png',
-    '/image1.png',
+    '/image3.png',
     '/image1.png',
   ]
   return (
