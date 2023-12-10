@@ -47,7 +47,7 @@ export default function Navbar(props: NavbarProps) {
       </div>
       <div className="navbar-end">
         <a className="btn btn-primary btn-outline btn-md lg:btn-lg text-white">
-          Contact
+          <Link href="mailto:info@puurcounselling.nl">Contact</Link>
         </a>
       </div>
     </div>

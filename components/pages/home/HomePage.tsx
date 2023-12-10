@@ -29,8 +29,6 @@ export function HomePage({ data }: HomePageProps) {
     components = [],
   } = data ?? {}
 
-  console.log(data)
-
   return (
     <div className="">
       {/* Header */}
