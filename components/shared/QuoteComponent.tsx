@@ -19,7 +19,7 @@ export function QuoteComponent(props: QuoteComponentProps) {
         visible: { opacity: 1, y: 0 },
         hidden: { opacity: 0, y: 25 },
       }}
-      className="mx-auto px-4 sm:py-24"
+      className="mx-auto px-4 py-10 sm:py-24"
     >
       <p className="text-center text-gray-500 font-dancing text-2xl sm:text-4xl lg:text-5xl text-opacity-20">
         {text}

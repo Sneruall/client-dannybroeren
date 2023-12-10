@@ -27,7 +27,7 @@ const Footer2 = () => {
         ))}
       </div>
       <div className="text-right max-w-screen-xl mx-auto my-4 px-4">
-        <p className="text-white uppercase text-4xl font-league tracking-widest">
+        <p className="text-white uppercase text-3xl sm:text-4xl font-league tracking-widest">
           Breng je leven in balans
         </p>
         <p className="text-white italic font-playfair mr-1">
