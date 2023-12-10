@@ -45,10 +45,13 @@ export default function Navbar(props: NavbarProps) {
             })}{' '}
         </ul>
       </div>
+
       <div className="navbar-end">
-        <a className="btn btn-primary btn-outline btn-md lg:btn-lg text-white">
-          <Link href="mailto:info@puurcounselling.nl">Contact</Link>
-        </a>
+        <Link href="mailto:info@puurcounselling.nl">
+          <div className="btn btn-primary btn-outline btn-md lg:btn-lg text-white">
+            Contact
+          </div>
+        </Link>
       </div>
     </div>
   )
