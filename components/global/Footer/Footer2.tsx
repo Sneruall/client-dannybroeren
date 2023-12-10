@@ -7,7 +7,7 @@ const Footer2 = () => {
     '/image1.png', //
     '/image2.png',
     '/image3.png',
-    '/image1.png',
+    '/image4.png',
   ]
   return (
     <footer className="">
