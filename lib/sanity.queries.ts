@@ -57,7 +57,10 @@ export const pagePaths = groq`
 export const settingsQuery = groq`
   *[_type == "settings"][0]{
     logo,
-    footer,
+    footerImages[],
+    footerHeading,
+    footerSubheading,
+    footerText,
     menuItems[]->{
       _type,
       "slug": slug.current,

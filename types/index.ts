@@ -1,3 +1,5 @@
+// todo: optimize payloads so e.g. footer is not included in settings payload and also passed as prop to navbar.
+
 import type { PortableTextBlock } from '@portabletext/types'
 import type { Image } from 'sanity'
 
@@ -39,7 +41,10 @@ export interface Component {
 
 // todo: update payload to e.g. not include showcaseProjects anymore
 export interface HomePagePayload {
-  footer?: PortableTextBlock[]
+  footerText?: PortableTextBlock[]
+  footerImages?: Image[]
+  footerHeading?: string
+  footerSubheading?: string
   overview?: PortableTextBlock[]
   showcaseProjects?: ShowcaseProject[]
   title?: string
@@ -71,7 +76,10 @@ export interface ProjectPayload {
 
 export interface SettingsPayload {
   logo?: Image
-  footer?: PortableTextBlock[]
+  footerText?: PortableTextBlock[]
+  footerImages?: Image[]
+  footerHeading?: string
+  footerSubheading?: string
   menuItems?: MenuItem[]
   ogImage?: Image
 }

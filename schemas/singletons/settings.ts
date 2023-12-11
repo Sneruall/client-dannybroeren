@@ -43,10 +43,37 @@ export default defineType({
       ],
     }),
     defineField({
-      name: 'footer',
+      name: 'footerImages',
+      title: 'Footer Images',
+      description: 'Images displayed at the bottom of the page.',
+      type: 'array',
+      validation: (rule) => rule.max(4),
+      of: [
+        {
+          type: 'image',
+          options: {
+            hotspot: true,
+          },
+        },
+      ],
+    }),
+    defineField({
+      name: 'footerHeading',
+      title: 'Footer Heading',
+      description: 'Heading displayed at the bottom of the page.',
+      type: 'string',
+    }),
+    defineField({
+      name: 'footerSubheading',
+      title: 'Footer Subheading',
+      description: 'Subheading displayed at the bottom of the page.',
+      type: 'string',
+    }),
+    defineField({
+      name: 'footerText',
       description:
         'This is a block of text that will be displayed at the bottom of the page.',
-      title: 'Footer Info',
+      title: 'Footer copyright text',
       type: 'array',
       of: [
         defineArrayMember({
