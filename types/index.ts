@@ -20,15 +20,6 @@ export interface MilestoneItem {
   title?: string
 }
 
-export interface ShowcaseProject {
-  _type: string
-  coverImage?: Image
-  overview?: PortableTextBlock[]
-  slug?: string
-  tags?: string[]
-  title?: string
-}
-
 export interface Component {
   _type: string
   image?: Image
@@ -38,15 +29,12 @@ export interface Component {
 }
 
 // Page payloads
-
-// todo: update payload to e.g. not include showcaseProjects anymore
 export interface HomePagePayload {
   footerText?: PortableTextBlock[]
   footerImages?: Image[]
   footerHeading?: string
   footerSubheading?: string
   overview?: PortableTextBlock[]
-  showcaseProjects?: ShowcaseProject[]
   title?: string
   components?: Component[]
 }
