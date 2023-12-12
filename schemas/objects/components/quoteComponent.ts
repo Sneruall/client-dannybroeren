@@ -1,10 +1,10 @@
-import { BlockquoteIcon } from '@sanity/icons'
+import { FaQuoteLeft } from 'react-icons/fa'
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'quoteComponent',
   title: 'Quote',
-  icon: BlockquoteIcon, // Use an icon that represents a quote
+  icon: FaQuoteLeft, // Use an icon that represents a quote
   type: 'object',
   fields: [
     defineField({

@@ -1,4 +1,4 @@
-import { HomeIcon, ImageIcon } from '@sanity/icons'
+import { FaHome } from 'react-icons/fa'
 
 import { defineArrayMember, defineField, defineType } from 'sanity'
 
@@ -6,7 +6,7 @@ export default defineType({
   name: 'home',
   title: 'Home',
   type: 'document',
-  icon: HomeIcon,
+  icon: FaHome,
   // Uncomment below to have edits publish automatically as you type
   // liveEdit: true,
   fields: [
