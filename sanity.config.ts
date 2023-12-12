@@ -23,19 +23,15 @@ import settings from 'schemas/singletons/settings'
 import imageAndTextComponent from 'schemas/objects/components/imageAndTextComponent'
 import quoteComponent from 'schemas/objects/components/quoteComponent'
 
-const title =
-  process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE ||
-  'Next.js Personal Website with Sanity.io'
+const title = process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || 'Puur Counselling'
 
 export const PREVIEWABLE_DOCUMENT_TYPES = [
   home.name,
   page.name,
-  project.name,
 ] satisfies string[]
 
 export const PREVIEWABLE_DOCUMENT_TYPES_REQUIRING_SLUGS = [
   page.name,
-  project.name,
 ] satisfies typeof PREVIEWABLE_DOCUMENT_TYPES
 
 // Used to generate URLs for drafts and live previews
@@ -65,7 +61,6 @@ export default defineConfig({
       // Documents
       duration,
       page,
-      project,
       // Objects
       milestone,
       timeline,
