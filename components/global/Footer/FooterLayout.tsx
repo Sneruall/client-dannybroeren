@@ -1,7 +1,7 @@
 import type { PortableTextBlock } from '@portabletext/types'
 import { CustomPortableText } from 'components/shared/CustomPortableText'
+import { urlForImage } from 'lib/sanity.image'
 import Image from 'next/image'
-import { Image as SanityImage } from 'sanity'
 import type { SettingsPayload } from 'types'
 
 interface FooterProps {
@@ -12,14 +12,13 @@ export default function Footer(props: FooterProps) {
   const footerText = data?.footerText || ([] as PortableTextBlock[])
   const heading = data?.footerHeading || ''
   const subheading = data?.footerSubheading || ''
-
-  const footerImages = data?.footerImages || ([] as SanityImage[])
-  const images = ['/image1.png', '/image2.png', '/image3.png', '/image4.png']
+  const footerImages = data?.footerImages || []
+  const imageUrls = footerImages.map((image) => urlForImage(image)?.url() || '')
 
   return (
     <footer className="bottom-0 w-full pb-12 text-center md:pb-20 bg-primary">
       <div className="flex justify-center items-center gap-3 mx-auto max-w-screen-xl mt-3">
-        {images.map((image, index) => (
+        {imageUrls.map((image, index) => (
           <div key={index} className="w-full h-80 relative">
             <Image
               src={image}
