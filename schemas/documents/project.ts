@@ -1,11 +1,12 @@
-import { DocumentIcon, ImageIcon } from '@sanity/icons'
+import { FaImage } from 'react-icons/fa'
+import { IoIosDocument } from 'react-icons/io'
 import { defineArrayMember, defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'project',
   title: 'Project',
   type: 'document',
-  icon: DocumentIcon,
+  icon: IoIosDocument,
   // Uncomment below to have edits publish automatically as you type
   // liveEdit: true,
   fields: [
@@ -123,7 +124,7 @@ export default defineType({
         }),
         defineField({
           type: 'image',
-          icon: ImageIcon,
+          icon: FaImage,
           name: 'image',
           title: 'Image',
           options: {

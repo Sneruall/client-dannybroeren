@@ -1,10 +1,10 @@
-import { ImageIcon } from '@sanity/icons'
+import { FaImage } from 'react-icons/fa'
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'imageAndTextComponent',
   title: 'Image And Text Component',
-  icon: ImageIcon,
+  icon: FaImage,
   type: 'object',
   fields: [
     defineField({
