@@ -1,5 +1,34 @@
 /** @type {import('next').NextConfig} */
 const config = {
+  redirects: async () => {
+    return [
+      {
+        source: '/counselling',
+        destination: '/aanpak',
+        permanent: true,
+      },
+      {
+        source: '/wie-ben-ik',
+        destination: '/puur',
+        permanent: true,
+      },
+      {
+        source: '/tarieven-en-vergoedingen',
+        destination: '/aanpak',
+        permanent: true,
+      },
+      {
+        source: '/dietetiek',
+        destination: '/aanpak',
+        permanent: true,
+      },
+      {
+        source: '/registratie',
+        destination: '/registraties',
+        permanent: true,
+      },
+    ]
+  },
   images: {
     remotePatterns: [
       { hostname: 'cdn.sanity.io' },
