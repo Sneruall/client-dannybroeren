@@ -27,6 +27,16 @@ const config = {
         destination: '/registraties',
         permanent: true,
       },
+      {
+        source: '/reacties',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/links',
+        destination: '/',
+        permanent: true,
+      },
     ]
   },
   images: {
