@@ -25,9 +25,8 @@ export default defineType({
     }),
     defineField({
       name: 'overview',
-      description:
-        'Used both for the <meta> description tag for SEO, and the personal website subheader.',
-      title: 'Overview',
+      description: 'Used for the <meta> description tag for SEO.',
+      title: 'Description',
       type: 'array',
       of: [
         // Paragraphs

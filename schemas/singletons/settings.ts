@@ -12,7 +12,7 @@ export default defineType({
     defineField({
       name: 'logo',
       title: 'Logo',
-      description: 'This image will be used as the logo for the project',
+      description: 'This image will be used as the logo for the website',
       type: 'image',
       options: {
         hotspot: true,
@@ -22,7 +22,7 @@ export default defineType({
     defineField({
       name: 'menuItems',
       title: 'Menu Item list',
-      description: 'Links displayed on the header of your site.',
+      description: 'Links displayed in the navigation menu of your site.',
       type: 'array',
       of: [
         {
@@ -42,7 +42,8 @@ export default defineType({
     defineField({
       name: 'footerImages',
       title: 'Footer Images',
-      description: 'Images displayed at the bottom of the page.',
+      description:
+        'Images displayed at the bottom of the page in the footer component.',
       type: 'array',
       validation: (rule) => rule.max(4),
       of: [
@@ -57,19 +58,21 @@ export default defineType({
     defineField({
       name: 'footerHeading',
       title: 'Footer Heading',
-      description: 'Heading displayed at the bottom of the page.',
+      description:
+        'Heading displayed at the bottom of the page in the footer component.',
       type: 'string',
     }),
     defineField({
       name: 'footerSubheading',
       title: 'Footer Subheading',
-      description: 'Subheading displayed at the bottom of the page.',
+      description:
+        'Subheading displayed at the bottom of the page in the footer component.',
       type: 'string',
     }),
     defineField({
       name: 'footerText',
       description:
-        'This is a block of text that will be displayed at the bottom of the page.',
+        'This is a block of text that will be displayed at the ultimate bottom of the page.',
       title: 'Footer copyright text',
       type: 'array',
       of: [
