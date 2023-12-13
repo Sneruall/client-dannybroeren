@@ -9,17 +9,6 @@ export interface MenuItem {
   title?: string
 }
 
-export interface MilestoneItem {
-  description?: string
-  duration?: {
-    start?: string
-    end?: string
-  }
-  image?: Image
-  tags?: string[]
-  title?: string
-}
-
 export interface Component {
   _type: string
   image?: Image

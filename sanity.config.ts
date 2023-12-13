@@ -14,9 +14,6 @@ import Iframe, {
 } from 'sanity-plugin-iframe-pane'
 import { previewUrl } from 'sanity-plugin-iframe-pane/preview-url'
 import page from 'schemas/documents/page'
-import duration from 'schemas/objects/duration'
-import milestone from 'schemas/objects/milestone'
-import timeline from 'schemas/objects/timeline'
 import home from 'schemas/singletons/home'
 import settings from 'schemas/singletons/settings'
 import imageAndTextComponent from 'schemas/objects/components/imageAndTextComponent'
@@ -58,11 +55,8 @@ export default defineConfig({
       home,
       settings,
       // Documents
-      duration,
       page,
       // Objects
-      milestone,
-      timeline,
       imageAndTextComponent,
       quoteComponent,
     ],
