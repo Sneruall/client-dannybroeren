@@ -23,7 +23,7 @@ export function ImageAndTextComponent(props: ImageAndTextComponentProps) {
       <div className="w-screen h-screen relative sm:hidden -mx-4">
         {imageUrl && (
           <Image
-            alt="todo alt"
+            alt="Balance stones"
             fill
             style={{
               objectFit: 'cover',
@@ -52,7 +52,7 @@ export function ImageAndTextComponent(props: ImageAndTextComponentProps) {
             {imageUrl && (
               <Image
                 className="rounded-lg"
-                alt="todo alt"
+                alt="Balance stones"
                 sizes="512px"
                 fill
                 style={{
@@ -74,7 +74,6 @@ export function ImageAndTextComponent(props: ImageAndTextComponentProps) {
           )}
         </div>
       </div>
-      {/* Todo, call to actie toevoegen? Anders zo'n homepage waar je niet vanaf komt... */}
     </>
   )
 }
